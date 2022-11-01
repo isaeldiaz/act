@@ -16,6 +16,7 @@ RUN apt-get update && \
     ./configure $ACT_HOME && \
     ./build && \
     make install && \
+    apt-get purge --auto-remove -y build-essential \
     rm -Rf /tmp/*
 
 
